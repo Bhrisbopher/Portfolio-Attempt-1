@@ -1,0 +1,169 @@
+/* BASIC RESET */
+* { margin:0; padding:0; box-sizing:border-box }
+
+/* PAGE HEADER */
+.page-header {
+  background: rgba(255,255,255,0.9);
+  padding: .5rem;
+  width: 75%;
+  margin: 1rem auto 0;
+  box-sizing: border-box;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.page-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 96px;
+}
+.page-header .subtitle {
+  font-size: 36px;
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+  padding-bottom: .2rem;
+}
+
+/* TAB NAV */
+.tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+  background: #3179EE;
+  padding: .75rem;
+  overflow-x: auto;
+}
+.tab-nav a {
+  flex: 0 0 auto;
+  background: #fff;
+  color: #000;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background .3s;
+}
+.tab-nav a:hover,
+.tab-nav a.active {
+  background: #e0e0e0;
+}
+
+/* GALLERY GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  gap: 16px;
+  padding: 1rem;
+}
+
+/* THUMBNAIL CARD */
+.img-ctr {
+  --dx: 0; --dy: 0;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+  transform-origin: center center;
+}
+.img-ctr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity .5s ease-in-out;
+  display: block;
+}
+.img-ctr h3,
+.img-ctr p {
+  display: none; /* shown only in side caption */
+}
+
+/* EXPANDED ON HOVER */
+.img-ctr:hover {
+  transform: scale(1.1);
+}
+
+.img-ctr:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* DIMMING SPOTLIGHT */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+#overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* FULL-SCREEN PREVIEW */
+#previewOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9) no-repeat center center;
+  background-size: contain;
+  display: block;
+  opacity: 0;
+  transition: opacity .25s ease-in 0.25s;
+  cursor: zoom-out;
+  z-index: 999;
+  pointer-events: none;
+}
+#previewOverlay.show {
+opacity: 1;
+visibility: visible;
+}
+
+/* SIDE/BOTTOM CAPTION */
+#caption-box {
+  position: absolute; /* Allows dynamic positioning */
+  background: #5e5858;
+  color: #fff;
+  padding: 1rem;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 21;
+}
+#caption-box.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* MOBILE TWEAKS */
+@media (max-width: 600px) {
+  .page-header h2 { font-size: 48px }
+  .page-header .subtitle { font-size: 24px }
+  .gallery { gap: 8px }
+  .img-ctr.expanded {
+     transition-delay: 500ms;
+    transform: translate(var(--dx), var(--dy)) scale(1.4) }
+  /* bottom caption on mobile */
+  #caption-box {
+    display: block;
+    left: 50%;
+    top: auto;
+    bottom: 10vh;
+    transform: translateX(-50%);
+    max-width: 90vw;
+    background: rgba(255,255,255,0.85);
+    color: #000;
+  }
+}

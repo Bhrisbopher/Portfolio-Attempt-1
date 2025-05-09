@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Christopher Damaskos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap');
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Montserrat', sans-serif; color:#333; }
+    a { text-decoration:none; color:inherit; }
+
+    .hero {
+      background:#3179EE;
+      color:#fff;
+      text-align:center;
+      padding:5rem 1rem;
+    }
+    .hero h1 {
+      font-family:'Cormorant Garamond', serif;
+      font-size:4rem;
+      letter-spacing:2px;
+      margin-bottom:1rem;
+    }
+    .hero p.subtitle {
+      font-size:2rem;
+      text-transform:uppercase;
+      letter-spacing:5px;
+      margin-bottom:1rem;
+    }
+    .hero p.lead {
+      font-size:1.125rem;
+      margin-bottom:2rem;
+    }
+    .hero .btn {
+      background:#F3F4F6;
+      color:#000;
+      padding:1rem 2rem;
+      border-radius:9999px;
+      font-weight:700;
+      display:inline-block;
+    }
+    .hero hr {
+      border:none;
+      border-top:3px dotted rgba(255,255,255,0.7);
+      width:75%;
+      margin:3rem auto 0;
+    }
+
+    .tab-nav {
+      background:#3179EE;
+      padding:2rem 0;
+      text-align:center;
+    }
+    .tab-nav a {
+      background:#fff;
+      color:#000;
+      padding:.75rem 1.5rem;
+      margin:.5rem;
+      border-radius:4px;
+      font-weight:700;
+      transition:background .3s;
+    }
+    .tab-nav a:hover {
+      background:#e0e0e0;
+    }
+
+    @media(max-width:600px) {
+      .hero h1 { font-size:3rem; }
+      .hero p.subtitle { font-size:1.5rem; }
+      .tab-nav a { padding:.5rem 1rem; margin:.3rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="bg.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <h1>Christopher Damaskos</h1>
+    <p class="subtitle">ENGINEER & ARTIST</p>
+    <p class="lead">2025 Mechanical Engineering Graduate with Honors<br>from Case Western Reserve University</p>
+    <a href="about.html" class="btn">ABOUT ME</a>
+    <hr>
+  </header>
+  <nav class="tab-nav">
+    <a href="media-2d.html">2‑D Media</a>
+    <a href="media-mixed.html">Mixed Media</a>
+    <a href="media-sculptural.html">Sculptural</a>
+    <a href="media-functional.html">Functional</a>
+    <a href="media-class-projects.html">Class Projects</a>
+  </nav>
+</body>
+</html>

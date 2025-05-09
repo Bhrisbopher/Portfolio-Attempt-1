@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Template</title>
+  <style>
+    /* Reset & base styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Hero Section */
+    .hero {
+      background-color: #3179EE;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero p.subtitle { font-size: 1.5rem; margin-bottom: 1rem; letter-spacing: 2px; }
+    .hero p.lead { font-size: 1.125rem; margin-bottom: 2rem; }
+    .hero .btn {
+      display: inline-block;
+      background: #F0F0F0;
+      color: #000;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* Tab Navigation */
+    .tab-nav { background: #3179EE; }
+    .tab-nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    .tab-nav li {
+      margin: 0.5rem;
+    }
+    .tab-nav a {
+      display: block;
+      background: white;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .tab-nav a:hover { background: #e0e0e0; }
+
+    /* Section Styles */
+    section {
+      padding: 4rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .media-item img,
+    .media-item video {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.25rem; }
+      .hero p.subtitle { font-size: 1.25rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="bg.js" defer></script>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <h1>Christopher Damaskos</h1>
+    <p class="subtitle">ENGINEER & ARTIST</p>
+    <p class="lead">2025 Mechanical Engineering Graduate with Honors<br>from Case Western Reserve University</p>
+    <a href="#about" class="btn">ABOUT ME</a>
+  </header>
+
+  <!-- Tab Navigation -->
+  <nav class="tab-nav">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#media-2d">2-D Media</a></li>
+      <li><a href="#media-mixed">Mixed Media</a></li>
+      <li><a href="#media-sculptural">Sculptural</a></li>
+      <li><a href="#media-functional">Functional</a></li>
+      <li><a href="#media-class-projects">Class Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:center;">
+      <img src="path/to/your/photo.jpg" alt="Your Photo" style="max-width:300px;border-radius:8px;">
+      <p style="max-width:600px;">
+        Recent Graduate with a deep passion for creativity, individualism, and the outdoors. When I'm not in classes you can find me bodybuilding at the gym. If I'm not there, I'm probably at home working on art or taking care of my 115+ houseplants.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2-D Media Section -->
+  <section id="media-2d">
+    <h2>2-D Media</h2>
+    <div class="media-grid">
+      <!-- Example Image Item -->
+      <div class="media-item">
+        <img src="path/to/image1.jpg" alt="Artwork Description">
+      </div>
+      <!-- Example Video Item -->
+      <div class="media-item">
+        <video controls>
+          <source src="path/to/video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Add more .media-item blocks as needed -->
+    </div>
+  </section>
+
+  <!-- Mixed Media Section -->
+  <section id="media-mixed">
+    <h2>Mixed Media</h2>
+    <div class="media-grid">
+      <!-- Add images or videos here -->
+      <div class="media-item">
+        <img src="path/to/mixed1.jpg" alt="Mixed Media Art">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sculptural Section -->
+  <section id="media-sculptural">
+    <h2>Sculptural</h2>
+    <div class="media-grid">
+      <!-- 3D images or video walkthroughs -->
+      <div class="media-item">
+        <img src="path/to/sculpture1.jpg" alt="Sculpture">
+      </div>
+    </div>
+  </section>
+
+  <!-- Functional Section -->
+  <section id="media-functional">
+    <h2>Functional</h2>
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="path/to/functional1.jpg" alt="Functional Design">
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Projects Section -->
+  <section id="media-class-projects">
+    <h2>Class Projects</h2>
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="path/to/project1.jpg" alt="Class Project">
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

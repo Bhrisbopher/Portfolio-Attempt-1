@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me – Christopher Damaskos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap');
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Montserrat', sans-serif; color:#333; }
+    a { text-decoration:none; color:inherit; }
+
+    .hero {
+      background:#3179EE;
+      color:#fff;
+      text-align:center;
+      padding:4rem 1rem;
+    }
+    .hero h1 {
+      font-family:'Cormorant Garamond', serif;
+      font-size:5rem;
+      letter-spacing:2px;
+    }
+    .hero p.subtitle {
+      font-size:2rem;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      margin-top:1rem;
+    }
+
+    .tab-nav {
+      background:#3179EE;
+      padding:1rem 0;
+      text-align:center;
+    }
+    .tab-nav a {
+      background:#fff;
+      color:#000;
+      padding:.5rem 1rem;
+      margin:.3rem;
+      border-radius:4px;
+      font-weight:600;
+      transition:background .3s;
+    }
+    .tab-nav a:hover {
+      background:#e0e0e0;
+    }
+
+    section {
+      max-width:1000px;
+      margin:6rem auto;
+      padding:0 1rem;
+      text-align:center;
+    }
+    section h2 {
+      font-family:'Cormorant Garamond', serif;
+      font-size:4rem;
+      margin-bottom:3rem;
+    }
+    .about-content {
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:3rem;
+      justify-content:center;
+    }
+    .about-content img {
+      max-width:400px;
+      width:100%;
+      border-radius:20px;
+      border:5px solid #000;
+    }
+    .about-text {
+      /* removed border */
+      padding:2rem;
+      font-size:2rem;
+      font-weight:700;
+      line-height:1.4;
+      flex:1;
+      max-width:600px;
+      text-align:left;
+    }
+
+    @media(max-width:800px) {
+      .hero h1 { font-size:4rem; }
+      section h2 { font-size:3rem; }
+      .about-text { font-size:1.5rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="bg.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <h1>Christopher Damaskos</h1>
+    <p class="subtitle">ENGINEER & ARTIST</p>
+  </header>
+
+  <nav class="tab-nav">
+    <a href="index.html">Home</a>
+    <a href="media-2d.html">2‑D Media</a>
+    <a href="media-mixed.html">Mixed Media</a>
+    <a href="media-sculptural.html">Sculptural</a>
+    <a href="media-functional.html">Functional</a>
+    <a href="media-class-projects.html">Class Projects</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="C:\Users\demet\OneDrive\Documents\Site\Images\Website Art\Christopher Damaskos.jpg" alt="Christopher Damaskos">
+      <div class="about-text">
+        Recent Graduate with a deep passion for creativity, individualism, and the outdoors. When I’m not in classes you can find me bodybuilding at the gym. If I’m not there, I’m probably at home working on art or taking care of my 115+ houseplants.
+      </div>
+    </div>
+  </section>
+</body>
+</html>
